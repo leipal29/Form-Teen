@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spending</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
@@ -16,7 +15,7 @@
         data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"> +
     </button>
 
-    <div>
+    <div class="transaction-adding">
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
@@ -28,26 +27,27 @@
                         Transaction</label>
                     <div class="mb-4 input-group"> <span class="input-group-text"> <i class="bi bi-person-arms-up"></i>
                         </span> <input type="text" class="form-control" placeholder="e.g. McDonalds or Gift Card"
-                            id="reason-transaction" name="date" required> <span class="input-group-text"> <span class="tt"
-                                data-bs-placement="bottom" title="Enter your Email"> <i
+                            id="reason-transaction" name="date" required> <span class="input-group-text"> <span
+                                class="tt" data-bs-placement="bottom" title="Enter your Email"> <i
                                     class="bi bi-patch-question text-muted"></i> </span>
                     </div>
                     <label for="subject" class="form-label text-decoration-underline">Date</label>
                     <div class="mb-4 input-group"> <span class="input-group-text"> <i class="bi bi-person-arms-up"></i>
                         </span> <input type="text" class="form-control" placeholder="e.g. Put the Month/Day/Year"
-                            id="date-transaction" name="reason" required> <span class="input-group-text"> <span class="tt"
-                                data-bs-placement="bottom" title="Enter your Email"> <i
+                            id="date-transaction" name="reason" required> <span class="input-group-text"> <span
+                                class="tt" data-bs-placement="bottom" title="Enter your Email"> <i
                                     class="bi bi-patch-question text-muted"></i> </span>
                     </div>
 
                     <br> <label for="subject" class="form-label text-decoration-underline">Amount of Money</label>
                     <div class="mb-4 input-group"> <span class="input-group-text"> <i class="bi bi-person-arms-up"></i>
-                        </span> <input type="text" class="form-control" placeholder="e.g.Put the amount of money; -7.48 or 5"
-                            id="amount-transaction" name="amount" required> <span class="input-group-text"> <span class="tt"
-                                data-bs-placement="bottom" title="Enter your Email"> <i
-                                    class="bi bi-patch-question text-muted"></i> </span>
+                        </span> <input type="text" class="form-control"
+                            placeholder="e.g.Put the amount of money; -7.48 or 5" id="amount-transaction" name="amount"
+                            required> <span class="input-group-text"> <span class="tt" data-bs-placement="bottom"
+                                title="Enter your Email"> <i class="bi bi-patch-question text-muted"></i> </span>
                     </div>
-                    <div class=" text-center"> <button type="submit" class="btn btn-secondary">Submit!</button> </div>
+                    <div class=" text-center"> <button id="submitButton" type="submit"
+                            class="btn btn-secondary">Submit!</button> </div>
                     <div class="text-center pt-2">
                         <div id="email-feedback"></div>
                     </div>
@@ -58,10 +58,14 @@
 
 
 
+    <script src="storage_spending.js" defer></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
         </script>
+
+
 </body>
 
 </html>
